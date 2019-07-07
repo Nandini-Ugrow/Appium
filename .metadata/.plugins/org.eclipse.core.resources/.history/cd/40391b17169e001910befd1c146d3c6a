@@ -1,0 +1,36 @@
+package stepDefinitions;
+import Common.CommonMembers;
+import io.appium.java_client.Setting;
+import junit.framework.Assert;
+
+
+public class Trackers extends CommonMembers {
+	public static String more = "navigation_more";
+	public static String MoreOptions = "tv_toolbar_title";
+	public static final String Shop = "Shop";
+	public static final String KickCounter = "KickCounter";
+	public static final String HospitalBag = "HospitalBag";
+	public static final String Contractions = "Contractions";
+	public static final String Feedback = "Feedback";
+	public static final String FAQs = "FAQs";
+	
+	public static void MoreFab() {
+		driver.findElementById(more).click();
+	}
+	public static void MoreScreen() {
+		driver.findElementById(MoreOptions).click();
+
+	}
+	
+	
+    public static void TrackerOptions()
+    {
+    String opt= driver.findElementByName(Shop).getText();
+    System.out.println(opt);
+    if(opt.equalsIgnoreCase("Shop"))
+    System.out.println("element is present");
+    else
+    	System.out.println("not present");
+    	
+    }
+}

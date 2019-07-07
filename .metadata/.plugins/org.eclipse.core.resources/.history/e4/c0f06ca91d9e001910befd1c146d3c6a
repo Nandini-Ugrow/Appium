@@ -1,0 +1,13 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+
+public class TrackShop extends CommonMembers{
+	
+	public static void ShopScreen()
+	{
+		driver.findElementById(Trackers.Shop).click();
+		driver.executeScript("experitest:client.swipe(\"Down\", 0, 10000)");
+	}
+
+}

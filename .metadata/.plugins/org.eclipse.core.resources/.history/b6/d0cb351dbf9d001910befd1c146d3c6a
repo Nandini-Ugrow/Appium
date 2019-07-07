@@ -1,0 +1,68 @@
+package stepDefinitions;
+
+import java.net.URL;
+
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Common.CommonMembers;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class CreateAccount extends CommonMembers {
+	public static String PregHome = "tv_app_title";
+	public static String JoinUs = "btn_sign_up";
+	public static String Join = "Join us";
+	public static String Switch = "consentSwitch";
+	public static String Name = "et_name";
+	public static String Done = "Done";
+	public static String Date = "tv_due_date_new";
+	public static String Setdate = "mdtp_previous_month_arrow";
+	public static String DateVal = "//*[@contentDescription='26 February 2020 selected']";
+	public static String Ok = "mdtp_ok";
+	public static String VerifyDate = "btn_calculator_due_date_new";
+	public static String SetCalcDate = "btn_set_calculate_date";
+	public static String Back = "Back";
+	public static String Agree = "btn_agree_new";
+	
+	
+	public static void JoinPreg()
+	{
+		driver.findElementById(PregHome);
+	}
+	public static void JoinUsScreen()
+	{
+		driver.findElementById(JoinUs).click();;
+	}
+	public static void VerifyJoin()
+	{
+		driver.findElementById(Join);
+	}
+	public static void Switch()
+	{
+		driver.findElementById(Switch);
+		driver.hideKeyboard();
+	}
+	public static void SettingsPage() throws InterruptedException
+	{
+		driver.findElementById(Name).click();
+		driver.hideKeyboard();
+		driver.executeScript("experitest:client.swipe(\"Down\", 0, 500)");
+		driver.findElementByName(Done).click();
+        driver.findElementById(Date).click();
+        for(int i=0;i<=9;i++) {
+        driver.findElementById(Setdate).click();}
+        Thread.sleep(10,0);
+        driver.findElementByXPath(DateVal).click();
+        driver.findElementById(Ok).click();
+        driver.findElementById(VerifyDate).click();
+        driver.findElementById(SetCalcDate).click();
+        driver.findElementById(Back).click();
+        driver.findElementById(Agree).click();
+        Thread.sleep(1000, 0);
+        HomeScreen.verify_today_screen();
+        
+        
+	}
+
+}

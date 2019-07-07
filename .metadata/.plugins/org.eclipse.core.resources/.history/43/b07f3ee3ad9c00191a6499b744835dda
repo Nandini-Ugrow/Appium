@@ -1,0 +1,17 @@
+Feature: Pregnancy+ Homepage
+This feature verifies the functionality on Pregnancy+ 
+ 
+ @PregnancyHome
+Scenario: Verify I will join later functionality on Pregnancy+ screen
+
+Given I verify that I am in home screen of Pregnancy Apps
+Then I navigate to I will join later
+And I verify that I am in My Settings Page
+Then I enter name and Baby Sex
+And I navigate to Due Date screen
+Then I verify that I am in Due Date screen
+Then I set the Due Date
+And I choose Agree
+Then I verify that I am in today screen of Pregnancy+
+
+Scenario: Login to Pregnancy+ app

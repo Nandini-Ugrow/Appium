@@ -1,0 +1,32 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+
+public class ChooseBaby extends CommonMembers{
+
+	public static String bimg= "iv_today_header";
+	public static String Download="imgDownloaded";
+	
+	
+	public static void ImageTap()
+	{
+		driver.findElementById(bimg).click();
+		
+	}
+	public static void SwipeBaby()
+	{
+		driver.executeScript("experitest:client.swipe(\"Down\", 0, 1000)");
+
+	}
+	public static void DownloadImg()
+	{
+		driver.findElementById(Download).click();
+		
+	}
+	public static void NavigateToday()
+	{
+		driver.navigate().back();
+	}
+	
+
+}

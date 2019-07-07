@@ -1,0 +1,71 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+import Common.Hooks;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+
+public class PregnancyStep extends CommonMembers  {
+	
+	// HomeScreen
+	public static String Pregnancy = "tv_app_title";
+	public static void BeforeTestRun()
+	{
+		
+		Hooks.AppiumCapabilities();
+		HomeScreen.Home();
+	    HomeScreen.JoinLater();
+	    HomeScreen.VerifySettings();
+	    HomeScreen.NameRelation();
+
+		
+	}
+	public static void main(String[] args)
+	{
+		
+	}
+
+	/*@Given("^I verify that I am in home screen of Pregnancy Apps$")
+	public void i_verify_that_I_am_in_home_screen_of_Pregnancy_Apps() throws Throwable {
+	    HomeScreen.Home();
+	}
+	@Then("^I navigate to I will join later$")
+	public void i_navigate_to_I_will_join_later() throws Throwable {
+	    HomeScreen.JoinLater();
+	}
+
+	@Then("^I verify that I am in My Settings Page$")
+	public void i_verify_that_I_am_in_My_Settings_Page() throws Throwable {
+	    HomeScreen.VerifySettings();
+	    HomeScreen.NameRelation();
+	}
+
+	@Then("^I navigate to Due Date screen$")
+	public void i_navigate_to_Due_Date_screen() throws Throwable {
+	    HomeScreen.NavigateDate();
+	}
+
+	@Then("^I verify that I am in Due Date screen$")
+	public void i_verify_that_I_am_in_Due_Date_screen() throws Throwable {
+		HomeScreen.NavigateDate();
+	}
+
+	@Then("^I set the Due Date$")
+	public void i_set_the_Due_Date() throws Throwable {
+	    HomeScreen.SetDate();
+	}
+
+	@Then("^I choose Agree$")
+	public void i_choose_Agree() throws Throwable {
+	    HomeScreen.Agree();
+	}
+
+	@Then("^I verify that I am in today screen of Pregnancy\\+$")
+	public void i_verify_that_I_am_in_today_screen_of_Pregnancy() throws Throwable {
+	    HomeScreen.Today();
+	}*/
+
+
+
+}

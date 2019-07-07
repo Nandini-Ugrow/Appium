@@ -1,0 +1,10 @@
+import cucumber.api.java.Before;
+
+public class Hooks {
+	@Before("@PregnancyHome")
+	public static void BeforeTestRun()
+	{
+		
+	}
+
+}

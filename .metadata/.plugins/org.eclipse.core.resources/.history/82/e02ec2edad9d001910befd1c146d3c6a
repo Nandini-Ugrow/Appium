@@ -1,0 +1,13 @@
+package stepDefinitions;
+
+public class CreateAccount extends CommonMembers {
+	public static String JoinUs = "btn_sign_up";
+	public static String Join = "Join us";
+	public static String Switch = "consentSwitch";
+	
+	public static void JoinPreg()
+	{
+		d
+	}
+
+}

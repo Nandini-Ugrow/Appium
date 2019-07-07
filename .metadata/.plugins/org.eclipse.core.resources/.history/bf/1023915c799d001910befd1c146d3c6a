@@ -1,0 +1,107 @@
+package stepDefinitions;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import Common.CommonMembers;
+import Common.Hooks;
+
+public class HomeScreen extends CommonMembers{
+
+	// HomePage
+	public static String Pregnancy = "tv_app_title"; 
+	public static String Later = "btn_join_later";
+	public static String Settings = "//*[@id='text1']";
+	public static String Name = "et_name";
+	public static String Relation = "relationWithBaby";
+	public static String Mother = "Mother";
+	//public static String BabyGender = "c";
+	public static String Girl = "Girl";
+	public static String Done =  "bottomDoneBtn";
+	public static String Heading = "tv_top_heading";
+	public static String DueDate = "tv_due_date_new";
+	public static String PrevMonth = "mdtp_previous_month_arrow";
+	public static String Date = "//*[@contentDescription='02 July 2019']";
+	public static String OK = "mdtp_ok";
+	public static String Calc = "btn_calculator_due_date_new";
+	public static String SetDate ="btn_set_calculate_date";
+	public static String Agree = "btn_agree_new";
+	public static String Today = "tv_day_title";
+		
+	public static void Home()
+	{
+		driver.findElementById(Pregnancy);
+		Hooks.Wait();
+
+	}
+	public static void JoinLater()
+	{
+		driver.findElementById(Later).click();
+		Hooks.Wait();
+	}
+	public static void VerifySettings()
+	{
+		System.out.println("In VerifySettings....");
+		driver.findElementByXPath(Settings);
+		Hooks.Wait();
+		System.out.println("Done VerifySettings...");
+	}
+	public static void NameRelation()
+	{
+		driver.findElementById(Name).sendKeys(CommonMembers.NameVal);
+		/*ele= driver.findElementByXPath(Relation);
+		System.out.println(2);
+		Select RelationDropdown=new Select(ele);
+		RelationDropdown.selectByIndex(5);*/
+		//driver.sc
+	 
+		List<WebElement> relation = driver.findElements(By.xpath("//*[@text='Mother']"));
+		System.out.println(relation.size());
+		//relation.get(2).click();
+		
+	
+		/*WebElement gender= driver.findElementById("gender");
+		System.out.println(3);
+		Select GenderDropdown= new Select(gender);
+		GenderDropdown.selectByIndex(2);*/
+		
+	
+
+		/*ele=driver.findElementById(Sex);
+		//ele.click();
+		System.out.println("ele");*/
+		//driver.findElementByName(Girl).click();
+		//Hooks.Wait();
+
+		//driver.executeScript("seetest:client.swipeWhileNotFound(\"Down\", 0, 1000, \"NATIVE\", \"Done\", 0, 1000, 1, true)");
+		//Hooks.Wait();
+
+	}
+	public static void NavigateDate()
+	{
+		driver.findElementById(Heading);
+	}
+	public static void SetDate()
+	{
+		driver.findElementById(DueDate).click();
+		Hooks.Wait();
+		for(int i=0;i<=6;i++)
+		{
+			driver.findElementById(PrevMonth).click();
+		}
+		driver.findElementByXPath(Date).click();
+		driver.findElementById(OK).click();
+		driver.findElementById(Calc).click();
+		driver.findElementById(SetDate).click();
+	}
+	public static void Agree()
+	{
+		driver.findElementById(Agree).click();
+	}
+	public static void Today()
+	{
+		driver.findElementById(Today).click();
+	}
+}

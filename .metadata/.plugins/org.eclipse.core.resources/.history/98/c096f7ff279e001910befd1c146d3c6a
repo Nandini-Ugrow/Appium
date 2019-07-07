@@ -1,0 +1,14 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+
+public class LogOut extends CommonMembers {
+	
+	public static String LogOutImg = "//*[@id='iv_hp_logo_bg']";
+	
+	public static void LogOut()
+	{
+		driver.findElementByXPath(LogOutImg).click();
+	}
+
+}

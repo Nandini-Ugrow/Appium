@@ -1,0 +1,19 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+
+public class LogOut extends CommonMembers {
+	
+	public static String LogOutImg = "//*[@id='iv_hp_logo_bg']";
+	public static String BtnSignOut = "//*[@id='btn_signout']";
+	public static String Yes = "//*[@text='YES']";
+	
+	public static void LogOut()
+	{
+		driver.findElementByXPath(LogOutImg).click();
+		driver.executeScript("experitest:client.swipe(\"Down\", 0, 500)");
+		driver.findElementByXPath(BtnSignOut).click();
+
+	}
+
+}

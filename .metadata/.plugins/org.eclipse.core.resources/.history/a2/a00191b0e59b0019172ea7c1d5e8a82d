@@ -1,0 +1,8 @@
+Feature: Pregnancy+ Homepage
+This feature verifies the functionality on Pregnancy+ 
+ 
+ @PregnancyHome
+Scenario: Verify I will join later functionality on Pregnancy+ screen
+
+Given I verify that I am in home screen of Pregnancy+
+Then I 

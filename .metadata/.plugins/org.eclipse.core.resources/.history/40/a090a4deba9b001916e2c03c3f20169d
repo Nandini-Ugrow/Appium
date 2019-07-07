@@ -1,0 +1,12 @@
+package featurestepDefinitions;
+
+import org.junit.Test;
+
+public class MainTest {
+
+	@Test
+	public void test() {
+		//fail("Not yet implemented");
+	}
+
+}

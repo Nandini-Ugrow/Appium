@@ -1,0 +1,15 @@
+package stepDefinitions;
+import Common.CommonMembers;
+
+
+public class Trackers extends CommonMembers {
+	public static String more = "navigation_more";
+	public static String Shop = "navigation_more";
+	public static String KickCounter = "KickCounter";
+	public static String HospitalBag = "HospitalBag";
+	public static String Contractions = "Contractions";
+	public static String Feedback = "Feedback";
+	public static String FAQs = "FAQs";
+
+
+}

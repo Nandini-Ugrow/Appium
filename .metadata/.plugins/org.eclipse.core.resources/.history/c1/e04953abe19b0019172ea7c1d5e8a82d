@@ -1,0 +1,9 @@
+package stepDefinitions;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class CommonMembers {
+	public static RemoteWebDriver driver;
+	public static WebElement ele;
+}

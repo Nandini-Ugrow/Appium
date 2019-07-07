@@ -1,0 +1,27 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+
+public class TrackShop extends CommonMembers{
+	
+	public static String Baby="shareTxt";
+	public static String BabyCare = "Baby care";
+	public static String Item = "//*[@text='2-3 Hooded towels']";
+	
+	public static void ShopScreen()
+	{
+		driver.findElementById(Trackers.Shop).click();
+		driver.executeScript("experitest:client.swipe(\"Down\", 0, 500)");
+	}
+	public static void BabyCare()
+	{
+		driver.findElementById(Baby).click();
+		driver.executeScript("experitest:client.swipe(\"Down\", 0, 500)");
+		driver.findElementById(BabyCare).click();
+	}
+	public static void ItemDisp()
+	{
+		driver.findElementByXPath(Item).click();
+	}
+
+}

@@ -1,0 +1,12 @@
+package Common;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class CommonMembers {
+	
+	//Common Members
+	public static RemoteWebDriver driver;
+	public static WebElement ele;
+	
+}

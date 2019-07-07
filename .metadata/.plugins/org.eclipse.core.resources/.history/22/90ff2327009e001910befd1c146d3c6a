@@ -1,0 +1,143 @@
+package stepDefinitions;
+
+import Common.CommonMembers;
+import Common.Hooks;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class PregnancyStep extends CommonMembers  {
+	
+	// HomeScreen
+	public static String Pregnancy = "tv_app_title";
+	
+	@Before
+	public static void BeforeTestRun()
+	{
+		
+		Hooks.AppiumCapabilities();
+		
+
+		
+	}
+
+	/*@Given("^I verify that I am in home screen of Pregnancy Apps$")
+	public void i_verify_that_I_am_in_home_screen_of_Pregnancy_Apps() throws Throwable {
+	    HomeScreen.Home();
+	}
+    @Then("^I navigate to I will join later$")
+	public void i_navigate_to_I_will_join_later() throws Throwable {
+	    HomeScreen.JoinLater();
+	}
+
+	@Then("^I verify that I am in My Settings Page$")
+	public void i_verify_that_I_am_in_My_Settings_Page() throws Throwable {
+	    HomeScreen.VerifySettings();
+	    HomeScreen.NameRelation();
+	}
+
+	@Then("^I navigate to Due Date screen$")
+	public void i_navigate_to_Due_Date_screen() throws Throwable {
+	    HomeScreen.NavigateDate();
+	}
+
+	@Then("^I verify that I am in Due Date screen$")
+	public void i_verify_that_I_am_in_Due_Date_screen() throws Throwable {
+		HomeScreen.NavigateDate();
+	}
+
+	@Then("^I set the Due Date$")
+	public void i_set_the_Due_Date() throws Throwable {
+	    HomeScreen.SetDate();
+	}
+
+	@Then("^I choose Agree$")
+	public void i_choose_Agree() throws Throwable {
+	    HomeScreen.Agree();
+	}
+
+	@Then("^I verify that I am in today screen of Pregnancy\\+$")
+	public void i_verify_that_I_am_in_today_screen_of_Pregnancy() throws Throwable {
+	    HomeScreen.Today();
+	}*/
+	@Given("^I verify that I am in Login Screen$")
+	public void i_verify_that_I_am_in_Login_Screen() throws Throwable {
+	    HomeScreen.verify_login();
+	}
+
+	@Then("^I enter Email Address and Confirm Email$")
+	public void i_enter_Email_Address_and_Confirm_Email() throws Throwable {
+	    HomeScreen.verify_email();
+	}
+
+	@Then("^I enter Password$")
+	public void i_enter_Password() throws Throwable {
+	    HomeScreen.enter_password();
+	}
+
+	@Then("^I choose Continue$")
+	public void i_choose_Continue() throws Throwable {
+	    HomeScreen.login_continue();
+	}
+	@Then("^I verify that I am in Today Screen$")
+	public void i_verify_that_I_am_in_Today_Screen() throws Throwable {
+		HomeScreen.verify_today_screen();
+	}
+	@Given("^I am in HomeScreen of BabyPlus$")
+	public void i_am_in_HomeScreen_of_BabyPlus() throws Throwable {
+	    CreateAccount.JoinPreg();
+	}
+
+	@Then("^I navigate to JoinUs Screen$")
+	public void i_navigate_to_JoinUs_Screen() throws Throwable {
+	    CreateAccount.JoinUsScreen();
+	    CreateAccount.VerifyJoin();
+	}
+
+	@When("^I enter the philips account credentials 'devicefarm@philips\\.com' with password '#Welcome(\\d+)'$")
+	public void i_enter_the_philips_account_credentials_devicefarm_philips_com_with_password_Welcome(int arg1) throws Throwable {
+		CreateAccount.createemail();
+		CreateAccount.create_enter_password();
+		CreateAccount.Switch();
+		CreateAccount.SettingsPage();
+		
+	}
+	@Then("^I tap the image$")
+	public void i_tap_the_image() throws Throwable {
+	   ChooseBaby.ImageTap();
+	}
+
+	@Then("^I swipe to choose babay$")
+	public void i_swipe_to_choose_babay() throws Throwable {
+		ChooseBaby.SwipeBaby();
+	}
+
+	@When("^I download Baby Image$")
+	public void i_download_Baby_Image() throws Throwable {
+	    ChooseBaby.DownloadImg();
+	}
+
+	@Then("^I navigate back to Today Screen$")
+	public void i_navigate_back_to_Today_Screen() throws Throwable {
+	    ChooseBaby.NavigateToday();
+	}
+
+	@Then("^I again tap the image$")
+	public void i_again_tap_the_image() throws Throwable {
+		ChooseBaby.ImageTap();
+	}
+	@Then("^I navigate to more options screen$")
+	public void i_navigate_to_more_options_screen() throws Throwable {
+	    
+	}
+
+	@Then("^I verify that I am in more options screen$")
+	public void i_verify_that_I_am_in_more_options_screen() throws Throwable {
+	    
+
+	@Then("^I see Shortcut options 'Shop', 'KickCounter', 'HospitalBag', 'Contractions', 'Feedback', 'FAQs'\\.$")
+	public void i_see_Shortcut_options_Shop_KickCounter_HospitalBag_Contractions_Feedback_FAQs() throws Throwable {
+	}
+
+}

@@ -1,0 +1,65 @@
+package stepDefinitions;
+import Common.CommonMembers;
+import io.appium.java_client.Setting;
+
+
+public class Trackers extends CommonMembers {
+	public static String more = "navigation_more";
+	public static final String Shop = "navigation_more";
+	public static final String KickCounter = "KickCounter";
+	public static final String HospitalBag = "HospitalBag";
+	public static final String Contractions = "Contractions";
+	public static final String Feedback = "Feedback";
+	public static final String FAQs = "FAQs";
+	
+	public enum ShortcutOption {
+		Shop, 
+		KickCounter, 
+		HospitalBag, 
+		Contractions, 
+		Feedback, 
+		FAQs
+    }
+	
+	public static Boolean VerifyShortcutOptions(String Shop,  String KickCounter, String HospitalBag, String Contractions, String Feedback, String FAQs) {
+        Boolean isPresent = false;
+        var parameters = new { Shop, KickCounter, 
+    		HospitalBag, 
+    		Contractions, 
+    		Feedback, 
+    		FAQsy };
+        foreach (PropertyInfo pi in parameters.GetType().GetProperties())
+        {
+            isPresent = Trackers.IsShortcutOptions(pi.GetValue(parameters, null).ToString());
+        }
+        return isPresent;
+    }
+    public static Boolean IsShortcutOptions(String shortcutOption){
+        boolean status = true;
+        ShortcutOption MyStatus = (ShortcutOption)Enum.Parse(typeof(ShortcutOption), shortcutOption, true);
+        switch (MyStatus){
+            case ShortcutOption.IVFeed:
+                driver.FindElementByXPath(IVFeed);
+                Thread.Sleep(2000);
+                break;
+            case ShortcutOption.IVSleep:
+                driver.FindElementByXPath(IVSleep);
+                Thread.Sleep(2000);
+                break;
+            case ShortcutOption.IVNappy:
+                driver.FindElementByXPath(IVNappy);
+                Thread.Sleep(2000);
+                break;
+            case ShortcutOption.IVDairy:
+                driver.FindElementByXPath(IVDairy);
+                Thread.Sleep(2000);
+                break;
+            case ShortcutOption.IVFaceaDay:
+                driver.FindElementByXPath(IVFaceaDay);
+                Thread.Sleep(2000);
+                break;
+        }
+        return status;
+    }
+
+}
